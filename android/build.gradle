@@ -13,7 +13,7 @@ buildscript {
 
     dependencies {
         //noinspection GradleDependency
-        classpath 'com.android.tools.build:gradle:3.1.4'
+        classpath 'com.android.tools.build:gradle:3.2.1'
     }
 }
 
@@ -22,10 +22,9 @@ apply plugin: 'com.android.library'
 android {
     compileSdkVersion safeExtGet('compileSdkVersion', 27)
     //noinspection GradleDependency
-    buildToolsVersion safeExtGet('buildToolsVersion', '27.0.3')
 
     defaultConfig {
-        minSdkVersion safeExtGet('minSdkVersion', 16)
+        minSdkVersion safeExtGet('minSdkVersion', 19)
         //noinspection OldTargetApi
         targetSdkVersion safeExtGet('targetSdkVersion', 27)
     }
@@ -49,5 +48,5 @@ repositories {
 
 dependencies {
     //noinspection GradleDynamicVersion
-    implementation 'com.facebook.react:react-native:+'
+    compileOnly 'com.facebook.react:react-native:+'
 }
