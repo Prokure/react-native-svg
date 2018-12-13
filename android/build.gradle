@@ -22,7 +22,6 @@ apply plugin: 'com.android.library'
 android {
     compileSdkVersion safeExtGet('compileSdkVersion', 26)
     //noinspection GradleDependency
-    buildToolsVersion safeExtGet('buildToolsVersion', '26.0.3')
 
     defaultConfig {
         minSdkVersion safeExtGet('minSdkVersion', 16)
@@ -32,6 +31,7 @@ android {
     lintOptions {
         abortOnError false
     }
+    buildToolsVersion = '28.0.3'
 }
 
 repositories {
@@ -49,5 +49,5 @@ repositories {
 
 dependencies {
     //noinspection GradleDynamicVersion
-    compile 'com.facebook.react:react-native:+'
+    compileOnly 'com.facebook.react:react-native:+'
 }
